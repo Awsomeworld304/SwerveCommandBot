@@ -1,6 +1,6 @@
 FROM wpilib/wpilib/openjdk-ubuntu:18.04-11
 
-ARG USERNAME=argos
+ARG USERNAME=parts
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
