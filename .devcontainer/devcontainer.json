@@ -1,0 +1,30 @@
+{
+    "name": "WPI",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "remoteUser": "parts",
+    "mounts": [
+      "source=${localEnv:HOME}/.gradle,target=/home/parts/.gradle,type=bind,consistency=cached"
+    ],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "github.vscode-github-actions",
+          "aaron-bond.better-comments",
+          "redhat.java",
+          "vscjava.vscode-java-debug",
+          "GitHub.vscode-pull-request-github",
+          "GitHub.codespaces",
+          "streetsidesoftware.code-spell-checker",
+          "esbenp.prettier-vscode",
+          "yzhang.markdown-all-in-one"
+        ]
+      }
+    },
+    "features": {
+      "ghcr.io/devcontainers-contrib/features/pre-commit:2": {}
+    },
+    "postCreateCommand": "pipx install spotless==6.20.0 ; git fetch origin main:main",
+    "postStartCommand": "git fetch"
+  }
