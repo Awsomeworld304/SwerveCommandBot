@@ -1,4 +1,4 @@
-FROM wpilib/wpilib/openjdk-ubuntu:18.04-11
+FROM wpilib/roborio-cross-ubuntu:2024-22.04
 
 ARG USERNAME=parts
 ARG USER_UID=1000
